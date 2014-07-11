@@ -72,7 +72,7 @@ PreUpdateEventListener {
     boolean shouldFail = false;
     if (TenantUtils.isAnnotated(preUpdateEvent.getEntity().getClass())) {
       Integer setTenantId = preUpdateEvent.getEntity().tenantId
-      if (setTenantId != currentTenant.get()) {
+      if (currentTenant.get() != 0 && setTenantId != currentTenant.get()) {
         println "Failed Update Because TenantId Doesn't Match"
         shouldFail = true;
       }

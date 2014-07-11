@@ -3,3 +3,8 @@ plugin.xml
 .idea
 *.zip
 target
+.classpath
+.project
+.settings/
+target-eclipse/
+
